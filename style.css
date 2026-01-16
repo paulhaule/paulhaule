@@ -1,0 +1,57 @@
+/* GLOBAL */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif;}
+body { background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:white; }
+
+/* NAVIGATION */
+nav { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; position:relative; top:0; backdrop-filter:blur(10px); z-index:100;}
+nav ul { display:flex; list-style:none;}
+nav ul li a { color:white; text-decoration:none; margin-left:25px; transition:color 0.3s;}
+nav ul li a:hover { color:#00e6e6;}
+.logo { font-size:24px; color:#00e6e6; font-weight:bold; }
+
+/* HERO */
+.hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;}
+.profile-pic { width:160px; height:160px; border-radius:50%; border:4px solid #00e6e6; object-fit:cover; margin-bottom:20px;}
+.hero span { color:#00e6e6;}
+.btn { margin-top:20px; padding:12px 25px; background:#00e6e6; color:black; border-radius:30px; text-decoration:none; font-weight:bold; transition:background 0.3s;}
+.btn:hover { background:#00b894; color:white; }
+
+/* SECTIONS */
+section { padding:80px 40px; text-align:center; }
+
+/* FADE-IN / SCROLL ANIMATION */
+.fade-in, .fade-in-text { opacity:0; transform:translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.visible { opacity:1; transform:translateY(0); }
+
+/* ABOUT */
+#about p { max-width:700px; margin:auto; line-height:1.6; }
+
+/* SERVICES */
+#services { background: rgba(255,255,255,0.05);}
+.service-cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:30px;}
+.service-card { background: rgba(255,255,255,0.1); padding:30px 20px; border-radius:20px; backdrop-filter:blur(12px); transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease; cursor:pointer;}
+.service-card:hover { transform:translateY(-15px) scale(1.05); box-shadow:0 20px 40px rgba(0,0,0,0.5); background: rgba(0,230,230,0.1);}
+.service-card h3 { margin-top:15px; margin-bottom:15px; color:#00e6e6; font-size:20px;}
+.service-card p { font-size:15px; line-height:1.6;}
+.service-icon { width:70px; height:70px; object-fit:cover; transition: transform 0.4s ease;}
+.service-card:hover .service-icon { transform:rotate(10deg) scale(1.1);}
+
+/* PROJECTS */
+#projects .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:30px;}
+.card { background: rgba(255,255,255,0.1); padding:25px; border-radius:20px; backdrop-filter:blur(12px); transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform:translateY(-10px); box-shadow:0 15px 30px rgba(0,0,0,0.3);}
+.card h3 { margin-bottom:10px; color:#00e6e6;}
+.card p { font-size:15px; line-height:1.6;}
+
+/* CONTACT */
+#contact p { margin:5px 0; font-size:16px;}
+
+/* FOOTER */
+footer { padding:20px; text-align:center; background: rgba(0,0,0,0.3); margin-top:50px; }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav { flex-direction:column;}
+    nav ul { flex-direction:column; margin-top:10px;}
+    nav ul li a { margin-left:0; margin-top:10px;}
+}
